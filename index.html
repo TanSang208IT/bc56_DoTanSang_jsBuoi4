@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+  
+    <div class="container">
+        <h1>BÀI TẬP: QUẢN LÝ TUYỂN SINH</h1>
+        <label for="">Điểm thi tuyển sinh</label>
+        <h2>Anh Văn</h2>
+        <input type="text" placeholder="Điểm Anh" id="anh" class="diemAnh">
+        <h2>Toán</h2>
+        <input type="text" placeholder="Điểm Toán" id="toan" class="diemToan">
+        <h2>Ngữ Văn</h2>
+        <input type="text" placeholder="Điểm Văn" id="van" class="diemVan">
+
+        <h2>Chọn Khu Vực Ưu Tiên</h2>
+        <select name="" id="khuVuc">
+            <option value="khongKhuVucUuTien" id="khongKhuVucUuTien">X</option>
+            <option value="khuVucA" id="khuVucA">A</option>
+            <option value="khuVucB" id="khuVucB">B</option>
+            <option value="khuVucC" id="khuVucC">C</option>
+        </select>
+        <h2>Chọn Đối Tượng Ưu Tiên</h2>
+        <select name="" id="doiTuong">
+            <option value="khongDoiTuongUuTien" id="khongDoiTuongUuTien">X</option>
+            <option value="doiTuong1" id="doiTuong1">1</option>
+            <option value="doiTuong2" id="doiTuong2">2</option>
+            <option value="doiTuong3" id="doiTuong3">3</option>
+        </select>
+        <br><br>
+<button class="btn btn-success" id="ketQuaTuyenSinh" onclick="diemTuyenSinh()">Xem Kết Quả</button>
+<br>
+        <label for="">Kết quả</label>
+        <div class="bg-success bg-opacity-75 py-2 mt-3 text-white diemThiTuyenSinh"></div>
+
+    </div>
+<br><br>
+    <div class="container">
+        <h1>BÀI TẬP: NỘP TIỀN ĐIỆN</h1>
+
+        <label for="">HOÁ ĐƠN TIỀN ĐIỆN</label>
+        <h2>Tên Khách Hàng</h2>
+        <input type="text" placeholder="Họ Và Tên" id="" class="">
+        <h2>Số Kw Tiêu Thụ</h2>
+        <input type="text" placeholder="số Kw" id="soKw" class="soKwTieuThu">
+        <button class="btn btn-success" id="ketQuaTienDien" onclick="tongTienDien()">Tính Tiền Điện</button>
+<br>
+        <label for="">Tổng Tiền Điện</label>
+        <div class="bg-success bg-opacity-75 py-2 mt-3 text-white tongTienDien"></div>
+    </div>
+<br><br>
+    <div class="container">
+        <h1>BÀI TẬP: TÍNH THUẾ THU NHẬP CÁ NHÂN</h1>
+
+        <label for="">THUẾ THU NHẬP CÁ NHÂN</label>
+        <h2>Tên Khách Hàng</h2>
+        <input type="text" placeholder="Họ Và Tên" id="" class="">
+        <h2>TỔNG THU NHẬP NĂM</h2>
+        <input type="text" placeholder="Tổng thu nhập trong năm" id="tongThuNhap" class="tongThuNhapNam">
+        <h2>SỐ NGƯỜI PHỤ THUỘC</h2>
+        <input type="text" placeholder="Số người phụ thuộc" id="soNguoiPhuThuoc" class="nguoiPhuThuoc">
+        <br><br><br>
+        <button class="btn btn-success" id="tongThueSuat" onclick="tinhThueSuat()">Tính Thuế Suất</button>
+<br>
+        <label for="">Tính Thuế Suất</label>
+        <div class="bg-success bg-opacity-75 py-2 mt-3 text-white thueSuat"></div>  
+        <br><br>
+        <div class="container">
+            <h1>BÀI TẬP: TÍNH TIỀN CÁP</h1>
+            <label for="">TỔNG TIỀN DỊCH VỤ CÁP</label>
+            <h2>Khách Hàng</h2>
+            <select name="" id="loaiKhachHang">
+                <option value="">Chọn Loại Dịch Vụ</option>
+                <option value="nhaDan" id="nhaDan">Nhà Dân</option>
+                <option value="doanhNghiep" id="doanhNghiep">Doanh Nghiệp</option>
+            </select>
+            <br><br>
+            <div class="ketNoi" id="tongSoKetNoi">
+            <h2>SỐ KẾT NỐI CHO DOANH NGHIỆP</h2>
+            <input type="text" placeholder="Số kết nối " id="soKetNoi" class="tongSoKetNoi"> </div>
+            <br>
+            <h2>KÊNH CAO CẤP</h2>
+            <input type="text" placeholder="Số kênh cao cấp bạn muốn đăng ký " id="soKenhCaoCap" class="tongSoKenh">
+            <br><br>
+            <button class="btn btn-success" id="tongTienDichVu" onclick="tinhTienDichVu()">Tính Tổng Hoá Đơn</button>
+            <br><br>
+            <label for="">TỔNG HOÁ ĐƠN</label>
+            <div class="bg-success bg-opacity-75 py-2 mt-3 text-white tongTienCap"></div>  
+        </div>
+        <br><br><br>
+    </div>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
