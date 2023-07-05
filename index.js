@@ -186,15 +186,20 @@ document.querySelector(".thueSuat").innerHTML = "Số tiền bạn phải đóng
         }
     }
  }
+
  function anSoKetNoi () {
     var soKetNoiChoDoanhNghiep = document.getElementById("tongSoKetNoi");
     var loaiKhachHang = document.getElementById("loaiKhachHang").value;
+    console.log(loaiKhachHang);
 if (loaiKhachHang == nhaDan){
     soKetNoiChoDoanhNghiep.style.display = "none";
 } else {
     soKetNoiChoDoanhNghiep.style.display = "block";
 }
  }
+ 
+ anSoKetNoi();
+
  function tinhTienDichVu () {
 var loaiKhachHang = document.getElementById("loaiKhachHang").value;
 var phiXuLiHoaDon = xuLiHoaDon (loaiKhachHang);
